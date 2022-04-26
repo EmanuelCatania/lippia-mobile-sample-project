@@ -12,7 +12,7 @@ import cucumber.api.java.en.When;
  * Otherwise, if it is a simple action, like clicking a button and it has nothing related to business logic, is correct to put here.
  */
 public class HomeSteps extends PageSteps {
-
+/*
     @Then("Home page is displayed")
     public void isHomePageVisible() {
         HomeService.isViewLoaded();
@@ -27,5 +27,5 @@ public class HomeSteps extends PageSteps {
     public void doSignOut() {
         MobileActionManager.click(HomeConstants.SIGN_OUT_BUTTON_LOCATOR);
     }
-
+*/
 }
