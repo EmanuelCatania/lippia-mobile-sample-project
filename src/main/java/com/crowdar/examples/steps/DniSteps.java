@@ -13,11 +13,11 @@ public class DniSteps {
         DniService.doDniLogin(dni);
 
     }
-
-    @Given("me encuentro en la pantalla de DNI de la app Mobile")
-    public void meEncuentroEnLaPantallaDeDNIDeLaAppMobile() {
+    @Given("me encuentro en la pantalla de DNI de la app Mobile en el (.*)")
+    public void meEncuentroEnLaPantallaDeDNIDeLaAppMobileEnElAmbiente(String ambiente) {
         OnboardingService.isViewLoaded();
         OnboardingService.cancelBio();
+        //OnboardingService.cambiarAmbiente(ambiente);
     }
 
     @When("se ingresa DNI (.*)")
@@ -29,4 +29,5 @@ public class DniSteps {
     public void laAplicaciónRedirijeALaPantallaPantalla(String pantalla) {
         ValidatingService.validarPantalla(pantalla);
     }
+
 }

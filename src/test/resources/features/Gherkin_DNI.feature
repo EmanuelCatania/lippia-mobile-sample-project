@@ -5,20 +5,24 @@
  Feature: Ingresar DNI en la aplicación Mobile de Supervielle
 
    Background:
-     Given me encuentro en la pantalla de DNI de la app Mobile
-
    @smoke @regresion @Demo
    Scenario Outline: Ingreso DNI <DNI>
+     Given me encuentro en la pantalla de DNI de la app Mobile en el <Ambiente>
      When se ingresa DNI <DNI> y se hace click en el botón "Continuar"
      Then la aplicación redirije a la pantalla <Pantalla>
 
      Examples:
-       | DNI      | Pantalla                      |
-       | 5176396  | ¿Qué tipo de documento tenés? |
-       | 95955879 | Comenzar                      |
-       | 30603747 | Ingresar                      |
-       | 32836436 | Ingresá la Clave de Canales   |
-       | 10203060 | No pudimos identificarte      |
+       | DNI      | Pantalla                      | Ambiente |
+       | 5176396  | ¿Qué tipo de documento tenés? | Desa    |
+       | 95955879 | Comenzar                      | Desa    |
+       | 30603747 | Ingresar                      | Desa    |
+       | 37516796 | Ingresá la Clave de Canales   | Desa    |
+       | 10203060 | No pudimos identificarte      | Desa    |
+       #| 5176396  | ¿Qué tipo de documento tenés? | Test    |
+       #| 95955879 | Comenzar                      | Test    |
+       #| 30603747 | Ingresar                      | Test    |
+       #| 37516796 | Ingresá la Clave de Canales   | Test    |
+       #| 10203060 | No pudimos identificarte      | Test    |
 	
 #determinar si es LC o LE
 #enrolamiento biométrico para registración en la app (se cambio el accesibility id por uno no personalizado)
