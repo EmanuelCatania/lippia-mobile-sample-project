@@ -6,7 +6,7 @@ Feature: A client interact with the mobile application
     And The user send: <dni>
     Then Login page is displayed
 
-    @Demo
+    @Test
     Examples:
       | dni    |
       |37516796|
